@@ -93,20 +93,20 @@ const HomeScreenComponents = () => {
       <GridLoader color="rgba(200, 132, 255, 1)" />
     </div>
   ) : (
-     <div className='px-20 '>
+     <div className='px-4 sm:px-20 '>
     <p  className='pt-10 font-serif text-3xl font-extrabold '>Featured</p>
    
     {featured.map((book,) => (
       <>
-  <ol class="space-y-4 list-inside dark:text-gray-400 pt-5">
+  <ol class=" list-inside dark:text-gray-400 pt-5">
    <li className= ' text-black '>
-      <div className='flex py-10 gap-6'>
-      <img src={"https://storage.googleapis.com/du-prd/books/images/"+book.isbns[0].isbn13+".jpg"} alt="book_display" className='flex justify-center h-full w-36 mt-2'></img>
+      <div className='flex py-10 gap-6 item-center justify-center  sm:items-normal  sm:justify-normal'>
+      <img src={"https://storage.googleapis.com/du-prd/books/images/"+book.isbns[0].isbn13+".jpg"} alt="book_display" className='flex justify-center h-32 w-28 sm:h-full sm:w-36 mt-2'></img>
       <div>
-      <p className='font-serif text-lg font-bold'>{book.book_details[0].title}</p>
+      <p className='font-serif  text-[16px] sm:text-lg font-bold'>{book.book_details[0].title}</p>
       <p>{book.book_details[0].author}</p>
       <ul class="ps-5 mt-2 mb-4  space-y-1 list-disc list-inside">
-         <li className= ' pt-4 text-gray-700 '>{book.book_details[0].description}</li>
+         <li className= 'text-sm sm:text-[16px]  pt-4 text-gray-700 '>{book.book_details[0].description}</li>
       </ul>
       <Link to={book.amazon_product_url}>
       <button className='hidden sm:block bg-purple-300 hover:bg-purple-400 border rounded-lg p-3 px-5  ml-4 text-white '>Buy</button>
