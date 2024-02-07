@@ -70,7 +70,7 @@ const Bestseller = () => {
                 <p className='font-serif text-lg font-bold'>{item.book_details[0].title}</p>
                 <p>{item.book_details[0].description}</p>
                 <Link to={item.amazon_product_url}>
-                  <button className='hidden sm:block bg-purple-300 hover:bg-purple-400 border rounded-lg p-3 px-5 mt-4 text-white'>Buy</button>
+                  <button className=' bg-purple-300 hover:bg-purple-400 border rounded-lg p-3 px-5 mt-4 text-white'>Buy</button>
                 </Link>
               </div>
             </div>
